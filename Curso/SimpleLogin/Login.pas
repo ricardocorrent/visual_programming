@@ -31,18 +31,27 @@ implementation
 
 {$R *.dfm}
 
+uses Main;
+
 procedure TForm1.btnEnterClick(Sender: TObject);
 begin
-setValues;
+if test then
+  begin
+  setValues;
+  if (Login = 'admin') and (Pass = 'admin') then
+    begin
+      Form2.ShowModal;
+      Form1.Hide;
+    end
+  else
+    ShowMessage('Incorreta');
+  end;
 end;
 
 procedure TForm1.setValues;
 begin
-if test then
-  begin
   Login := edtLogin.Text;
   Pass := edtPass.Text;
-  end;
 end;
 
 function TForm1.test: Boolean;
@@ -50,12 +59,10 @@ begin
   Result := True;
 if Trim(edtLogin.Text) = '' then
   begin
-  Result := False;
   Exit(False);
   end;
  if Trim(edtPass.Text) = '' then
   begin
-  Result := False;
   Exit(False);
   end;
 end;
