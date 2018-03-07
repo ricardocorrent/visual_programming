@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2018/02/27 21:18:48.000.570,=C:\Users\Delphi\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2018/02/28 16:36:04.483,=C:\Users\Delphi\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2018/02/28 16:59:59.064,C:\Delphi\Curso\AbrirArquivoTexto\Arquivo.pas=C:\Users\Delphi\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2018/02/28 16:59:59.064,C:\Delphi\Curso\AbrirArquivoTexto\Arquivo.dfm=C:\Users\Delphi\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2018/02/28 17:00:05.297,C:\Delphi\Curso\AbrirArquivoTexto\ProjetoArquivo.dproj=C:\Users\Delphi\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2018/02/28 17:22:57.123,C:\Delphi\Curso\AbrirArquivoESalvar\ProjetoArquivo.dproj=C:\Delphi\Curso\AbrirArquivoTexto\ProjetoArquivo.dproj</Transaction>
+    <Transaction>2018/02/28 17:23:18.283,C:\Delphi\Curso\AbrirArquivoESalvar\Arquivo.pas=C:\Delphi\Curso\AbrirArquivoTexto\Arquivo.pas</Transaction>
+    <Transaction>2018/02/28 17:23:18.283,C:\Delphi\Curso\AbrirArquivoESalvar\Arquivo.dfm=C:\Delphi\Curso\AbrirArquivoTexto\Arquivo.dfm</Transaction>
+  </Transactions>
+</BorlandProject>
