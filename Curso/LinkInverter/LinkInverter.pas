@@ -4,10 +4,14 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls;
 
 type
   TForm1 = class(TForm)
+    pnlButton: TPanel;
+    grpMain: TGroupBox;
+    btnInverter: TBitBtn;
+    btnClose: TBitBtn;
   private
     { Private declarations }
   public
