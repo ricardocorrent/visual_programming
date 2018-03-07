@@ -6,7 +6,7 @@ object Form1: TForm1
   Caption = 'Link Inverter'
   ClientHeight = 201
   ClientWidth = 480
-  Color = clGradientActiveCaption
+  Color = clActiveBorder
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -16
@@ -21,7 +21,7 @@ object Form1: TForm1
     Top = 153
     Width = 482
     Height = 41
-    Color = clBackground
+    Color = clActiveBorder
     ParentBackground = False
     TabOrder = 0
     object btnInverter: TBitBtn
@@ -51,6 +51,9 @@ object Form1: TForm1
     Width = 464
     Height = 139
     Caption = 'Inverter'
+    Color = clActiveBorder
+    ParentBackground = False
+    ParentColor = False
     TabOrder = 1
     object lbl1: TLabel
       Left = 16
@@ -79,7 +82,6 @@ object Form1: TForm1
       Font.Style = []
       ParentFont = False
       TabOrder = 0
-      Text = 'l'
     end
     object edtInverted: TEdit
       Left = 16
