@@ -1,0 +1,48 @@
+unit LinkInverter;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls;
+
+type
+  TForm1 = class(TForm)
+    pnlButton: TPanel;
+    grpMain: TGroupBox;
+    btnInverter: TBitBtn;
+    btnClose: TBitBtn;
+    lbl1: TLabel;
+    edtOriginal: TEdit;
+    lbl2: TLabel;
+    edtInverted: TEdit;
+    procedure btnInverterClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.btnInverterClick(Sender: TObject);
+var
+I: Integer;
+Link: string;
+begin
+Link := edtOriginal.Text;
+I := StrLen(PChar(Link));
+edtInverted.Clear;
+while not I=0 do
+begin
+  edtInverted.Text := edtInverted + Link[I];
+  I := I - 1;
+end;
+end;
+
+end.

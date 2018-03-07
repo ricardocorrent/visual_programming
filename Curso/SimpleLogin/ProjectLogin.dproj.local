@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2018/02/27 21:18:48.000.570,=C:\Users\Delphi\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2018/03/07 14:33:27.818,=C:\Users\Delphi\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2018/03/07 14:33:59.587,C:\Delphi\Curso\SimpleLogin\Login.dfm=C:\Users\Delphi\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2018/03/07 14:33:59.587,C:\Delphi\Curso\SimpleLogin\Login.pas=C:\Users\Delphi\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2018/03/07 14:34:05.884,C:\Delphi\Curso\SimpleLogin\ProjectLogin.dproj=C:\Users\Delphi\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2018/03/07 14:38:56.567,=C:\Delphi\Curso\SimpleLogin\Unit2.pas</Transaction>
+    <Transaction>2018/03/07 14:40:34.286,C:\Delphi\Curso\SimpleLogin\Main.dfm=C:\Delphi\Curso\SimpleLogin\Unit2.dfm</Transaction>
+    <Transaction>2018/03/07 14:40:34.286,C:\Delphi\Curso\SimpleLogin\Main.pas=C:\Delphi\Curso\SimpleLogin\Unit2.pas</Transaction>
+  </Transactions>
+</BorlandProject>
