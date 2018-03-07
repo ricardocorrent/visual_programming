@@ -1,0 +1,29 @@
+unit Arquivo;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls;
+
+type
+  TfrmManipulando = class(TForm)
+    grpDiretorio: TGroupBox;
+    pnlTexto: TPanel;
+    mmoTexto: TMemo;
+    edtDiretorio: TEdit;
+    btnAbrir: TBitBtn;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmManipulando: TfrmManipulando;
+
+implementation
+
+{$R *.dfm}
+
+end.

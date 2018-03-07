@@ -1,0 +1,49 @@
+unit Unit1;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TForm1 = class(TForm)
+    lbl1: TLabel;
+    edtN1: TEdit;
+    lbl2: TLabel;
+    edtN2: TEdit;
+    lbl3: TLabel;
+    edtN3: TEdit;
+    btnCalc: TButton;
+    procedure btnCalcClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.btnCalcClick(Sender: TObject);
+var
+N1: Double;
+N2: Double;
+N3: Double;
+Nota: Double;
+begin
+N1 := StrToFloat(edtN1.Text);
+N2 := StrToFloat(edtN2.Text);
+N3 := StrToFloat(edtN3.Text);
+N1 := N1*2;
+N2 := N2*3;
+N3 := N3*5;
+Nota := ((N1+N2+N3)/10);
+ShowMessage('Nota: ' + FloatToStr(Nota));
+end;
+
+end.

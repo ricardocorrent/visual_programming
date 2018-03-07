@@ -1,0 +1,67 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Calculo de dias'
+  ClientHeight = 66
+  ClientWidth = 287
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poScreenCenter
+  PixelsPerInch = 96
+  TextHeight = 13
+  object lbl1: TLabel
+    Left = 8
+    Top = 8
+    Width = 24
+    Height = 13
+    Caption = 'Anos'
+  end
+  object Label1: TLabel
+    Left = 71
+    Top = 8
+    Width = 19
+    Height = 13
+    Caption = 'Mes'
+  end
+  object lbl2: TLabel
+    Left = 134
+    Top = 8
+    Width = 15
+    Height = 13
+    Caption = 'Dia'
+  end
+  object edtAno: TEdit
+    Left = 8
+    Top = 27
+    Width = 57
+    Height = 21
+    TabOrder = 0
+  end
+  object edtMes: TEdit
+    Left = 71
+    Top = 28
+    Width = 57
+    Height = 21
+    TabOrder = 1
+  end
+  object edtDia: TEdit
+    Left = 134
+    Top = 27
+    Width = 57
+    Height = 21
+    TabOrder = 2
+  end
+  object btnCalc: TButton
+    Left = 197
+    Top = 25
+    Width = 75
+    Height = 25
+    Caption = 'Calcular'
+    TabOrder = 3
+  end
+end

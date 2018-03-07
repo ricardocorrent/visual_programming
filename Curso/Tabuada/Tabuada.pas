@@ -1,0 +1,55 @@
+unit Tabuada;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TfrmTabuada = class(TForm)
+    lblTabuada: TLabel;
+    cbbNumeros: TComboBox;
+    lblResultado: TLabel;
+    procedure FormCreate(Sender: TObject);
+    procedure cbbNumerosChange(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmTabuada: TfrmTabuada;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmTabuada.cbbNumerosChange(Sender: TObject);
+var
+x: Integer;
+ii: Integer;
+begin
+lblResultado.Caption := '';
+for x := 1 to 10 do
+  begin
+    ii := StrToInt(cbbNumeros.Text);
+    lblResultado.Caption := lblResultado.Caption + cbbNumeros.Text +
+    ' x ' + IntToStr(x) + ' = ' +  IntToStr(ii * x) + #13;
+  end;
+end;
+
+procedure TfrmTabuada.FormCreate(Sender: TObject);
+var
+i: Integer;
+begin
+
+for i := 1 to 10 do
+  begin
+  cbbNumeros.Items.Add(IntToStr(i));
+  end;
+
+end;
+
+end.
