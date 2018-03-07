@@ -5,7 +5,7 @@ object Form1: TForm1
   BorderStyle = bsSingle
   Caption = 'Link Inverter'
   ClientHeight = 201
-  ClientWidth = 320
+  ClientWidth = 480
   Color = clGradientActiveCaption
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -19,13 +19,13 @@ object Form1: TForm1
   object pnlButton: TPanel
     Left = -1
     Top = 153
-    Width = 323
+    Width = 482
     Height = 41
     Color = clBackground
     ParentBackground = False
     TabOrder = 0
     object btnInverter: TBitBtn
-      Left = 112
+      Left = 317
       Top = 9
       Width = 75
       Height = 25
@@ -33,9 +33,10 @@ object Form1: TForm1
       Kind = bkOK
       NumGlyphs = 2
       TabOrder = 0
+      OnClick = btnInverterClick
     end
     object btnClose: TBitBtn
-      Left = 218
+      Left = 398
       Top = 9
       Width = 75
       Height = 25
@@ -47,9 +48,53 @@ object Form1: TForm1
   object grpMain: TGroupBox
     Left = 8
     Top = 8
-    Width = 305
+    Width = 464
     Height = 139
     Caption = 'Inverter'
     TabOrder = 1
+    object lbl1: TLabel
+      Left = 16
+      Top = 20
+      Width = 54
+      Height = 18
+      Caption = 'Original'
+    end
+    object lbl2: TLabel
+      Left = 16
+      Top = 76
+      Width = 54
+      Height = 18
+      Caption = 'Inverted'
+    end
+    object edtOriginal: TEdit
+      Left = 16
+      Top = 44
+      Width = 433
+      Height = 26
+      AutoSize = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Arial'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 0
+      Text = 'l'
+    end
+    object edtInverted: TEdit
+      Left = 16
+      Top = 100
+      Width = 433
+      Height = 26
+      AutoSize = False
+      Enabled = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Arial'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 1
+    end
   end
 end

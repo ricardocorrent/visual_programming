@@ -12,6 +12,11 @@ type
     grpMain: TGroupBox;
     btnInverter: TBitBtn;
     btnClose: TBitBtn;
+    lbl1: TLabel;
+    edtOriginal: TEdit;
+    lbl2: TLabel;
+    edtInverted: TEdit;
+    procedure btnInverterClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -24,5 +29,20 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TForm1.btnInverterClick(Sender: TObject);
+var
+I: Integer;
+Link: String;
+begin
+Link := edtOriginal.Text;
+I := StrLen(PChar(Link));
+edtInverted.Clear;
+while not (I = 0) do
+begin
+  edtInverted.Text := edtInverted.Text + Link[I];
+  I := I - 1;
+end;
+end;
 
 end.
