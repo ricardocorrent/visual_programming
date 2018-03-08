@@ -2,7 +2,7 @@ object Form1: TForm1
   Left = 0
   Top = 0
   BorderStyle = bsSingle
-  Caption = 'Form1'
+  Caption = 'Simple Calculator'
   ClientHeight = 390
   ClientWidth = 340
   Color = clInactiveBorder
@@ -15,23 +15,6 @@ object Form1: TForm1
   Position = poScreenCenter
   PixelsPerInch = 96
   TextHeight = 13
-  object lblDisplay: TLabel
-    Left = 8
-    Top = 8
-    Width = 324
-    Height = 110
-    Alignment = taRightJustify
-    AutoSize = False
-    Caption = 'teste'
-    Color = clGradientInactiveCaption
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = cl3DDkShadow
-    Font.Height = -23
-    Font.Name = 'Calibri'
-    Font.Style = []
-    ParentColor = False
-    ParentFont = False
-  end
   object lblNumbers: TLabel
     Left = 8
     Top = 124
@@ -48,6 +31,23 @@ object Form1: TForm1
     ParentColor = False
     ParentFont = False
   end
+  object lblDisplay: TLabel
+    Left = 8
+    Top = 8
+    Width = 324
+    Height = 110
+    Alignment = taRightJustify
+    AutoSize = False
+    Color = clGradientInactiveCaption
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = cl3DDkShadow
+    Font.Height = -23
+    Font.Name = 'Calibri'
+    Font.Style = []
+    ParentColor = False
+    ParentFont = False
+    WordWrap = True
+  end
   object btn0: TButton
     Left = 8
     Top = 331
@@ -61,6 +61,7 @@ object Form1: TForm1
     Font.Style = []
     ParentFont = False
     TabOrder = 0
+    OnClick = btn0Click
   end
   object btn1: TButton
     Left = 8
@@ -75,6 +76,7 @@ object Form1: TForm1
     Font.Style = []
     ParentFont = False
     TabOrder = 1
+    OnClick = btn1Click
   end
   object btn2: TButton
     Left = 74
@@ -89,6 +91,7 @@ object Form1: TForm1
     Font.Style = []
     ParentFont = False
     TabOrder = 2
+    OnClick = btn2Click
   end
   object btn3: TButton
     Left = 140
@@ -103,6 +106,7 @@ object Form1: TForm1
     Font.Style = []
     ParentFont = False
     TabOrder = 3
+    OnClick = btn3Click
   end
   object btn4: TButton
     Left = 8
@@ -117,6 +121,7 @@ object Form1: TForm1
     Font.Style = []
     ParentFont = False
     TabOrder = 4
+    OnClick = btn4Click
   end
   object btn5: TButton
     Left = 74
@@ -131,6 +136,7 @@ object Form1: TForm1
     Font.Style = []
     ParentFont = False
     TabOrder = 5
+    OnClick = btn5Click
   end
   object btn6: TButton
     Left = 140
@@ -145,6 +151,7 @@ object Form1: TForm1
     Font.Style = []
     ParentFont = False
     TabOrder = 6
+    OnClick = btn6Click
   end
   object btn7: TButton
     Left = 8
@@ -159,6 +166,7 @@ object Form1: TForm1
     Font.Style = []
     ParentFont = False
     TabOrder = 7
+    OnClick = btn7Click
   end
   object btn8: TButton
     Left = 74
@@ -173,6 +181,7 @@ object Form1: TForm1
     Font.Style = []
     ParentFont = False
     TabOrder = 8
+    OnClick = btn8Click
   end
   object btn9: TButton
     Left = 140
@@ -187,6 +196,7 @@ object Form1: TForm1
     Font.Style = []
     ParentFont = False
     TabOrder = 9
+    OnClick = btn9Click
   end
   object btnDot: TButton
     Left = 140
@@ -201,6 +211,7 @@ object Form1: TForm1
     Font.Style = []
     ParentFont = False
     TabOrder = 10
+    OnClick = btnDotClick
   end
   object btnDivide: TButton
     Left = 206
@@ -215,6 +226,7 @@ object Form1: TForm1
     Font.Style = []
     ParentFont = False
     TabOrder = 11
+    OnClick = btnDivideClick
   end
   object btnMultiply: TButton
     Left = 206
@@ -229,6 +241,7 @@ object Form1: TForm1
     Font.Style = []
     ParentFont = False
     TabOrder = 12
+    OnClick = btnMultiplyClick
   end
   object btnSubtract: TButton
     Left = 206
@@ -243,6 +256,7 @@ object Form1: TForm1
     Font.Style = []
     ParentFont = False
     TabOrder = 13
+    OnClick = btnSubtractClick
   end
   object btnAdd: TButton
     Left = 206
@@ -257,6 +271,7 @@ object Form1: TForm1
     Font.Style = []
     ParentFont = False
     TabOrder = 14
+    OnClick = btnAddClick
   end
   object btnResult: TButton
     Left = 272
@@ -264,6 +279,7 @@ object Form1: TForm1
     Width = 60
     Height = 162
     Caption = '='
+    Enabled = False
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -20
@@ -271,6 +287,7 @@ object Form1: TForm1
     Font.Style = []
     ParentFont = False
     TabOrder = 15
+    OnClick = btnResultClick
   end
   object btnClean: TButton
     Left = 272
@@ -285,5 +302,6 @@ object Form1: TForm1
     Font.Style = []
     ParentFont = False
     TabOrder = 16
+    OnClick = btnCleanClick
   end
 end

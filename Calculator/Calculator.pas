@@ -8,7 +8,6 @@ uses
 
 type
   TForm1 = class(TForm)
-    lblDisplay: TLabel;
     lblNumbers: TLabel;
     btn0: TButton;
     btn1: TButton;
@@ -27,17 +26,194 @@ type
     btnAdd: TButton;
     btnResult: TButton;
     btnClean: TButton;
+    lblDisplay: TLabel;
+    procedure btn0Click(Sender: TObject);
+    procedure btn1Click(Sender: TObject);
+    procedure btn2Click(Sender: TObject);
+    procedure btn3Click(Sender: TObject);
+    procedure btn4Click(Sender: TObject);
+    procedure btn5Click(Sender: TObject);
+    procedure btn6Click(Sender: TObject);
+    procedure btn7Click(Sender: TObject);
+    procedure btn8Click(Sender: TObject);
+    procedure btn9Click(Sender: TObject);
+    procedure btnDotClick(Sender: TObject);
+    procedure btnDivideClick(Sender: TObject);
+    procedure btnMultiplyClick(Sender: TObject);
+    procedure btnSubtractClick(Sender: TObject);
+    procedure btnAddClick(Sender: TObject);
+    procedure btnCleanClick(Sender: TObject);
+    procedure btnResultClick(Sender: TObject);
   private
     { Private declarations }
   public
     { Public declarations }
+    Operation: Integer;
+    Value: Real;
+    OtherValue: Real;
+    Result: Real;
+    I: Integer;
+    function putValue(v: Char): string;
+    procedure makeHistory(v: Char);
+    procedure calculate();
+    procedure setOperation(o: Integer);
+    procedure setOtherValue(ov: string);
   end;
 
 var
   Form1: TForm1;
 
 implementation
-
 {$R *.dfm}
+
+{ TForm1 }
+procedure TForm1.btn0Click(Sender: TObject);
+begin
+putValue('0');
+end;
+
+procedure TForm1.btn1Click(Sender: TObject);
+begin
+putValue('1');
+end;
+
+procedure TForm1.btn2Click(Sender: TObject);
+begin
+putValue('2');
+end;
+
+procedure TForm1.btn3Click(Sender: TObject);
+begin
+putValue('3');
+end;
+
+procedure TForm1.btn4Click(Sender: TObject);
+begin
+putValue('4');
+end;
+
+procedure TForm1.btn5Click(Sender: TObject);
+begin
+putValue('5');
+end;
+
+procedure TForm1.btn6Click(Sender: TObject);
+begin
+putValue('6');
+end;
+
+procedure TForm1.btn7Click(Sender: TObject);
+begin
+putValue('7');
+end;
+
+procedure TForm1.btn8Click(Sender: TObject);
+begin
+putValue('8');
+end;
+
+procedure TForm1.btn9Click(Sender: TObject);
+begin
+putValue('9');
+end;
+
+procedure TForm1.btnAddClick(Sender: TObject);
+begin
+setOperation(4);
+putValue('+');
+btnResult.Enabled := True;
+end;
+
+procedure TForm1.btnCleanClick(Sender: TObject);
+begin
+lblNumbers.Caption := '';
+end;
+
+procedure TForm1.btnDivideClick(Sender: TObject);
+begin
+setOperation(1);
+putValue('/');
+btnResult.Enabled := True;
+end;
+
+procedure TForm1.btnDotClick(Sender: TObject);
+begin
+putValue('.');
+end;
+
+procedure TForm1.btnMultiplyClick(Sender: TObject);
+begin
+setOperation(2);
+putValue('*');
+btnResult.Enabled := True;
+end;
+
+procedure TForm1.btnResultClick(Sender: TObject);
+begin
+calculate();
+lblDisplay.Caption := lblDisplay.Caption + #13 + lblNumbers.Caption +' = ' + FloatToStr(Result); 
+lblNumbers.Caption := FloatToStr(Result);
+end;
+
+procedure TForm1.btnSubtractClick(Sender: TObject);
+begin
+setOperation(3);
+putValue('-');
+btnResult.Enabled := True;
+end;
+
+procedure TForm1.calculate();
+begin
+setOtherValue(lblNumbers.Caption);
+case Operation of
+  1:
+  Result := Value / OtherValue;
+  2:
+  Result := Value * OtherValue;
+  3:
+  Result := Value - OtherValue;
+  4:
+  Result := Value + OtherValue;
+end;
+end;
+
+procedure TForm1.makeHistory(v: Char);
+begin
+lblDisplay.Caption := lblDisplay.Caption + lblNumbers.Caption + v;
+lblNumbers.Caption := '';
+end;
+
+function TForm1.putValue(v: Char): string;
+begin
+lblNumbers.Caption := lblNumbers.Caption + v;
+end;
+
+procedure TForm1.setOperation(o: Integer);
+begin
+Operation := o;
+Value := StrToFloat(lblNumbers.Caption);
+end;
+
+procedure TForm1.setOtherValue(ov: string);
+var
+  tam: Integer;  
+  OtherValueStr: string;
+begin
+case Operation of
+  1:
+  I := Pos('/',ov);
+  2:
+  I := Pos('*',ov);
+  3:
+  I := Pos('-',ov);
+  4:
+  I := Pos('+',ov);
+end;
+tam := ov.Length -1;
+//tam := tam - 1;
+OtherValueStr := Copy(ov, I+1, tam);
+OtherValue := StrToFloat(OtherValueStr);
+
+end;
 
 end.
