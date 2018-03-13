@@ -138,7 +138,7 @@ end;
 
 procedure TForm1.btnDotClick(Sender: TObject);
 begin
-putValue(',');
+putValue('.');
 end;
 
 procedure TForm1.btnMultiplyClick(Sender: TObject);

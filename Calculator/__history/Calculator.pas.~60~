@@ -26,7 +26,7 @@ type
     btnAdd: TButton;
     btnResult: TButton;
     btnClean: TButton;
-    lblDisplay: TLabel;
+    lst1: TListBox;
     procedure btn0Click(Sender: TObject);
     procedure btn1Click(Sender: TObject);
     procedure btn2Click(Sender: TObject);
@@ -138,7 +138,7 @@ end;
 
 procedure TForm1.btnDotClick(Sender: TObject);
 begin
-putValue(',');
+putValue('.');
 end;
 
 procedure TForm1.btnMultiplyClick(Sender: TObject);
@@ -196,7 +196,8 @@ end;
 
 procedure TForm1.setOtherValue(ov: string);
 var
-  tam: Integer;  
+  tam: Integer;
+  
   OtherValueStr: string;
 begin
 case Operation of
@@ -209,8 +210,9 @@ case Operation of
   4:
   I := Pos('+',ov);
 end;
-tam := ov.Length -1;
-//tam := tam - 1;
+//I := Pos('+',ov);
+tam := ov.Length;
+tam := tam - 1;
 OtherValueStr := Copy(ov, I+1, tam);
 OtherValue := StrToFloat(OtherValueStr);
 

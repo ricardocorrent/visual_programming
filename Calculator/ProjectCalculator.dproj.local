@@ -2,9 +2,9 @@
 <BorlandProject>
 	<Transactions>
     <Transaction>2018/02/27 21:18:48.000.570,=C:\Users\Delphi\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2018/03/08 09:55:56.033,=C:\Users\Delphi\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2018/03/08 09:56:45.088,C:\Delphi\Calculator\Calculator.dfm=C:\Users\Delphi\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
-    <Transaction>2018/03/08 09:56:45.088,C:\Delphi\Calculator\Calculator.pas=C:\Users\Delphi\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2018/03/08 09:56:51.595,C:\Delphi\Calculator\ProjectCalculator.dproj=C:\Users\Delphi\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2018/03/08 09:55:56.000.033,=C:\Users\Delphi\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2018/03/08 09:56:45.000.088,C:\Users\Delphi\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Delphi\Calculator\Calculator.pas</Transaction>
+    <Transaction>2018/03/08 09:56:45.000.088,C:\Users\Delphi\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Delphi\Calculator\Calculator.dfm</Transaction>
+    <Transaction>2018/03/08 09:56:51.000.595,C:\Users\Delphi\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Delphi\Calculator\ProjectCalculator.dproj</Transaction>
   </Transactions>
 </BorlandProject>

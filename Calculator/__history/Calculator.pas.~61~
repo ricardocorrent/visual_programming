@@ -26,7 +26,7 @@ type
     btnAdd: TButton;
     btnResult: TButton;
     btnClean: TButton;
-    lblDisplay: TLabel;
+    Label1: TLabel;
     procedure btn0Click(Sender: TObject);
     procedure btn1Click(Sender: TObject);
     procedure btn2Click(Sender: TObject);
@@ -138,7 +138,7 @@ end;
 
 procedure TForm1.btnDotClick(Sender: TObject);
 begin
-putValue(',');
+putValue('.');
 end;
 
 procedure TForm1.btnMultiplyClick(Sender: TObject);
